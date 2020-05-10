@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<title>Daragh | For Remote & Freelancers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="header">
+  <a href="#default" class="logo">Daragh.io</a>
+  <div class="header-right">
+    <a href="#">Light / Dark Mode</a>
+    <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+
+  </div>
+</div>
+
+<div class="container">
+  <h1>CREATE A CV/RESUME IN 10 MINUTES FOR FREE</h1>
+
+  <p>
+    Choose a job you love, and you will never have to work a day in your life. You improve your chances of getting hired if you have a good resume. 
+    <a href="template.html" style="background-color: var(--bg); color: var(--color-text); text-decoration: underline; font-size: 18px; text-transform: uppercase;">Get Started</a></p>
+
+
+  <div class="top-footer">
+    <a href="#">About <span style="padding-left: 5px;"> . </span></a>
+    <a style="padding-left: 5px;" href="#">Donate <span style="padding-left: 5px;"> . </span></a>
+    <a style="padding-left: 5px;" href="#">Contact <span style="padding-left: 5px;"> . </span></a>
+    <a style="padding-left: 5px;" href="#">License</a>
+    
+
+    <div style="padding-top: 10px;" class="social-links">
+      <a href="#"><i style="font-size: 12px;" class="fa fa-facebook"></i></a>
+        <a href="#"> <i style="padding-left: 5px; font-size: 12px;" class="fa fa-twitter"></i></a>
+        <a href="#"> <i style="padding-left: 5px; font-size: 12px;" class="fa fa-linkedin"></i></a>
+        <a href="#"> <i style="padding-left: 5px; font-size: 12px;" class="fa fa-instagram"></i></a>
+        <a href="#"> <i style="padding-left: 5px; font-size: 12px;" class="fa fa-github"></i></a>
+    </div>
+</div>
+
+
+</div>
+
+
+<div class="footer">
+    <p class="copyright">© 2020 · Daragh v1.0 · All rights reserved</p>
+  </div>
+
+
+  <script>
+    var checkbox = document.querySelector('input[name=theme]');
+    
+        checkbox.addEventListener('change', function() {
+            if(this.checked) {
+                trans()
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                trans()
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        })
+        
+        let trans = () => {
+            document.documentElement.classList.add('transition');
+            window.setTimeout(() => {
+                document.documentElement.classList.remove('transition')
+            }, 1000)
+        }
+    </script>
+</body>
+</html>
